@@ -1,0 +1,17 @@
+while True: 
+    try:
+        N=int(input('Введите число - сумму выплаты: '))
+        break
+    except ValueError:
+        print('Ошибка ввода. Попробуйте еще раз')
+bills = 64
+a=0
+print('Понадобится:')
+while N > 0:
+    c = N //bills 
+    if c != 0:
+        a+=N //bills
+        print(c,'купюр наминала',bills)
+        N = N % bills
+    bills = bills // 2
+print('Всего купюр:',a)
